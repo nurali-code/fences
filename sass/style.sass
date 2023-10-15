@@ -75,7 +75,7 @@
 .snow
     position: absolute
     left: calc((100% - 1473px)/2)
-    bottom: 18%
+    bottom: -17%
     width: 195px
     height: 195px
     z-index: 999
@@ -99,33 +99,36 @@
     @media screen and ( max-width: 1500px )
         width: 150px
         height: 150px
-        bottom: 17%
         left: 40px
+
+    @media screen and ( max-width: 1200px )
+        left: 20px
 
 @media screen and ( max-width: 900px )
     .main
         height: unset
         ul
             gap: 10px
+            max-width: 400px
         p
             max-width: 600px
             margin: 0 auto 20px
             font-size: 16px
 
-        .container 
-            position: relative
-
     .snow
-        width: 80px
-        height: 80px
-        left: 10px
+        width: 100px
+        height: 100px
         bottom: 16%
 
 @media screen and ( max-width: 700px )
     .main
         min-height: 660px
         height: 100vh
-    
+
+    .snow
+        width: 80px
+        height: 80px
+        left: 10px
 
 @keyframes circle
     0%
