@@ -50,7 +50,7 @@ h1
     line-height: 110%
     margin: 0 0 24px
 
-h2 
+h2
     font-size: 40px
 
 ol, ul
@@ -113,7 +113,7 @@ section
     border-radius: 78px
     color: $prime_dark
     font-weight: 500
-    padding: 28px 90px
+    padding: 24px 80px
     font-size: 24px
     border-radius: 78px
     background: radial-gradient(76.16% 76.16% at 31.97% 19.67%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.00) 69.79%, rgba(255, 255, 255, 0.00) 100%), $prime
@@ -219,3 +219,25 @@ select
     position: relative
     z-index: 1
     margin: 0 0 10px
+
+@media screen and ( max-width: 900px )
+    h2
+        font-size: 30px
+    ul
+        li
+            font-size: 14px
+
+        &.styled
+            li
+                padding: 10px 16px 10px 42px
+                background-size: 19px auto 
+                background-position: center left 14px
+
+    .btn 
+        padding: 18px 60px
+        font-size: 20px
+
+
+@media screen and ( max-width: 700px )
+    h2
+        font-size: 20px
