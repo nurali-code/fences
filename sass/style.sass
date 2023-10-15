@@ -3,17 +3,32 @@
 @import 'header'
 
 .main
-    min-height: 700px
-    height: 85vh
+    min-height: 100vh
     max-height: 960px
     display: flex
     align-items: center
     justify-content: center
     color: white
     text-align: center
-    padding: 160px 0 60px
+    padding: 100px 0 40px
     position: relative
     z-index: 1
+    &::after
+        content: ''
+        display: inline-block
+        width: 23px
+        height: 33px
+        background-image: url('../img/ic-scroll.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+        pointer-events: none
+        z-index: 111
+        position: absolute
+        bottom: 5%
+        left: 50%
+        transform: translateX(-50%)
+
     &__bg
         position: absolute
         top: 0
@@ -38,7 +53,7 @@
 
     h1
         max-width: 960px
-        margin-bottom: 15px
+        margin: 0 auto 15px
 
     p
         font-size: 20px
@@ -58,9 +73,9 @@
         margin: 0
 
 .snow
-    position: fixed
-    left: 10%
-    bottom: 15%
+    position: absolute
+    left: calc((100% - 1473px)/2)
+    bottom: 18%
     width: 195px
     height: 195px
     z-index: 999
@@ -81,24 +96,36 @@
         left: 0
         animation: circle 10s linear infinite
 
+    @media screen and ( max-width: 1500px )
+        width: 150px
+        height: 150px
+        bottom: 17%
+        left: 40px
+
 @media screen and ( max-width: 900px )
     .main
-        min-height: 700px
         height: unset
         ul
             gap: 10px
         p
+            max-width: 600px
+            margin: 0 auto 20px
             font-size: 16px
 
+        .container 
+            position: relative
+
     .snow
-        width: 100px
-        height: 100px
-        left: 20px
-        bottom: 20px
+        width: 80px
+        height: 80px
+        left: 10px
+        bottom: 16%
 
 @media screen and ( max-width: 700px )
-    h1
-        font-size: 23px
+    .main
+        min-height: 660px
+        height: 100vh
+    
 
 @keyframes circle
     0%
