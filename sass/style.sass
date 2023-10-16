@@ -10,7 +10,7 @@
     justify-content: center
     color: white
     text-align: center
-    padding: 100px 0 40px
+    padding: 170px 0 100px
     position: relative
     z-index: 1
     &::after
@@ -70,6 +70,7 @@
     color: white
     text-align: center
     h2
+        padding: 0 15px
         margin: 0
 
 .snow
@@ -80,8 +81,10 @@
     height: 195px
     z-index: 999
     border-radius: 50%
+    justify-content: center
     img
         max-width: 45%
+        object-position: center center
     &::before
         content: ''
         display: inline-block
@@ -95,6 +98,7 @@
         top: 0
         left: 0
         animation: circle 10s linear infinite
+        pointer-events: none
 
     @media screen and ( max-width: 1500px )
         width: 150px
@@ -111,6 +115,7 @@
             gap: 10px
             max-width: 400px
         p
+            font-weight: 500
             max-width: 600px
             margin: 0 auto 20px
             font-size: 16px
@@ -122,8 +127,6 @@
 
 @media screen and ( max-width: 700px )
     .main
-        min-height: 660px
-        height: 100vh
 
     .snow
         width: 80px
